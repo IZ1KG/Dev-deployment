@@ -1,15 +1,24 @@
 package com.itzik.devops.deploymentdemo;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class HelloControllerTest {
+    //Small string test
+    @Test
+    void testSayHelloContainsName() {
+        HelloController controller = new HelloController();
+        String result = controller.sayHello();
+
+        assertTrue(result.contains("Itzik Galanti"), "Response should contain 'Itzik Galanti'");
+    }
 
     @Test
-    public void testSayHello() {
+    void testSayHelloContainsEmoji() {
         HelloController controller = new HelloController();
-        String response = controller.sayHello();
+        String result = controller.sayHello();
 
-        assertTrue(response.contains("Hello from DevOps Deployment Demo 🚀"));
+        assertTrue(result.contains("🚀"), "Response should contain the rocket emoji 🚀");
     }
 }
