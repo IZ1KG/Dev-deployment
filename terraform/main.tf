@@ -50,6 +50,7 @@ resource "aws_instance" "app_ec2" {
     #!/bin/bash
     apt-get update -y && \
     apt-get install -y docker.io && \
+    usermod -aG docker ubuntu\
     systemctl start docker && \
     systemctl enable docker && \
     docker pull itzikgalanti/deployment-demo:latest && \
