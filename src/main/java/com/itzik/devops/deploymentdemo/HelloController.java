@@ -30,7 +30,7 @@ public class HelloController {
                     </style>
                 </head>
                 <body>
-                    <h1>Hello from Itzik Galanti 🚀 <br> Hope  will like 😁</h1>
+                    <h1>Hello from Itzik Galanti 🚀 <br> Hope  Uwill like 😁</h1>
                 </body>
             </html>
             """;
