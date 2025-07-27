@@ -50,11 +50,12 @@ resource "aws_instance" "app_ec2" {
     #!/bin/bash
     apt-get update -y && \
     apt-get install -y docker.io && \
-    usermod -aG docker ubuntu\
+    usermod -aG docker ubuntu && \
     systemctl start docker && \
     systemctl enable docker && \
     docker pull itzikgalanti/deployment-demo:latest && \
-    docker run -d --name deployment-demo -p 80:8080 itzikgalanti/deployment-demo:latest
+    docker run -d --restart always --name deployment-demo -p 80:8080 itzikgalanti/deployment-demo:latest && \
+    reboot
   EOF
 
   tags = {
