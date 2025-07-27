@@ -4,11 +4,12 @@
 
 To deploy the application:
 
-1. Clone the repo and enter the directory
-2. Run `terraform apply` under the `terraform` folder
-3. Push updates to `src/**`, `Dockerfile`, or `pom.xml` to trigger deployment
+1. Clone the repo and enter the directory.
+2. Run `terraform apply` under the `terraform` folder to provision the EC2 instance.
+3. To enable automatic CI/CD deployments, you must fork the repository and configure your own GitHub Secrets and EC2 instance.
+   - Once set up, pushing changes to `src/**`, `Dockerfile`, or `pom.xml` on the `main` branch will trigger deployment.
 
-See details below for CI/CD, Docker, and infrastructure explanation.
+### See details below for CI/CD, Docker, and infrastructure explanation.
 ---
 ## Project Overview
 
