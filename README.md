@@ -6,6 +6,9 @@
 
 This repository contains a full DevOps workflow for deploying a Java-based Spring Boot application to an AWS EC2 instance using Docker containers and infrastructure provisioning with Terraform. The system implements a CI/CD pipeline using GitHub Actions for automation.
 
+The application is currently live at:
+[http://3.89.127.178:80/hello](http://3.89.127.178/hello)
+
 ---
 
 ## Why GitHub Actions Instead of Jenkins?
