@@ -54,7 +54,7 @@ resource "aws_instance" "app_ec2" {
     systemctl start docker && \
     systemctl enable docker && \
     docker pull itzikgalanti/deployment-demo:latest && \
-    docker run -d --restart always --name deployment-demo -p 80:8080 itzikgalanti/deployment-demo:latest && \
+    docker run -d --restart unless-stopped --name deployment-demo -p 80:8080 itzikgalanti/deployment-demo:latest && \
     reboot
   EOF
 
