@@ -1,7 +1,15 @@
 # DevOps Assignment – CI/CD, Docker, Terraform, and AWS
 
----
+## Quick Start (Summary)
 
+To deploy the application:
+
+1. Clone the repo and enter the directory
+2. Run `terraform apply` under the `terraform` folder
+3. Push updates to `src/**`, `Dockerfile`, or `pom.xml` to trigger deployment
+
+See details below for CI/CD, Docker, and infrastructure explanation.
+---
 ## Project Overview
 
 This repository contains a full DevOps workflow for deploying a Java-based Spring Boot application to an AWS EC2 instance using Docker containers and infrastructure provisioning with Terraform. The system implements a CI/CD pipeline using GitHub Actions for automation.
@@ -13,7 +21,8 @@ The application is currently live at:
 
 ## Why GitHub Actions Instead of Jenkins?
 
-The initial plan included Jenkins for CI/CD, but due to resource limitations on a `t2.micro` instance (AWS free tier), the decision was made to switch to GitHub Actions. GitHub-hosted runners provide better performance without additional cost, allowing the pipeline to complete builds and deployments efficiently.
+The initial plan included Jenkins for CI/CD. However, during testing, it became clear that Jenkins consumed too many resources on a t2.micro instance (AWS free tier), often leading to system instability or crashes. To overcome this, GitHub Actions was selected as a replacement.
+GitHub-hosted runners execute the automation workflows on their own servers, and only connect to the EC2 instance when needed for deployment. This offloads the heavy lifting from the limited EC2 instance and improves reliability without introducing extra costs.
 
 ---
 
