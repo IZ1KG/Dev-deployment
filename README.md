@@ -5,7 +5,8 @@
 To deploy the application:
 
 1. Clone the repo and enter the directory.
-2. Run `terraform apply` under the `terraform` folder to provision the EC2 instance.
+2. Run  `terraform init`, `terraform apply` from the `terraform` folder to provision the EC2 instance.  
+   - The app will then be available at: `http://<YOUR_EC2_PUBLIC>:80/hello`
 3. To enable automatic CI/CD deployments, you must fork the repository and configure your own GitHub Secrets and EC2 instance.
    - Once set up, pushing changes to `src/**`, `Dockerfile`, or `pom.xml` on the `main` branch will trigger deployment.
 
