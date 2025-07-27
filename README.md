@@ -78,6 +78,8 @@ Terraform provisions the following:
 
 * Adds the `ubuntu` user to the `docker` group, allowing GitHub Actions to run Docker commands without requiring `sudo`. This is essential for CI/CD automation over SSH (The reason for the reboot at the end).
 
+* Pull from docker hub (docker pull itzikgalanti/deployment-demo:latest)
+
 * Runs the container on instance start via `user_data`
 
   * The container is launched using the `--restart unless-stopped` flag, which ensures it automatically restarts after an EC2 reboot. This improves reliability by avoiding the need for manual restarts in case the instance goes down and comes back up.
