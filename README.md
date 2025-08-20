@@ -1,4 +1,4 @@
-# DevOps Assignment – CI/CD, Docker, Terraform, and AWS
+# DevOps Practice – CI/CD, Docker, Terraform, and AWS
 
 ## Quick Start (Summary)
 
